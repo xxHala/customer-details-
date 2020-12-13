@@ -66,10 +66,12 @@ body {
   margin-top: 16px;
 }
 select#List {
-  color: #777;
-  border: 0px;
+  color: var(--secondary-text);
+  border-radius: 5px;
   outline: none;
-
+  border: solid 1px #c1c1c1;
+  background: #fffdfd;
+  display: inline-block;
   padding: 8px 6px;
   display: block;
   font-family: "Inter", sans-serif;
