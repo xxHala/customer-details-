@@ -16,37 +16,37 @@
             <hr>
             <div class="form-field">
                 <h5>Full Name</h5>
-                <input type="text" name="Fname" id="name" >
+                <input type="text" name="Fname" id="name">
                 <label for="Fname">First Name</label>
-                <input type="text" name="Lname" id="name" >
+                <input type="text" name="Lname" id="name">
                 <label for="Lname">Last Name</label>
             </div>
-<div class="form-field">
-    <h5>Address</h5>
-    <input type="text" name="street-address" id="street-add"> 
-    <label for="street-address">Street Address</label>
-    <input type="text" name="street-address-line2" id="street-add2">
-    <label for="street-address-line2">Street Address Line 2 </label>
-    <input type="text" name="City" id="city"> 
-    <label for="City"> City </label>
-    <input type="text" name="state" id="state">
-    <label for="state"> State/Province </label>
-    <input type="text" name="code-z" id="code-z">
-    <label for="code-z"> Postal/Zip Code </label>
-</div>
-<div class="form-field">
-    <h5>Phone Number </h5>
-  <input type="text" name="phone-number" id="phone-number"  placeholder="(000) 000-0000">
-</div>
+            <div class="form-field">
+                <h5>Address</h5>
+                <input type="text" name="street-address" id="street-add">
+                <label for="street-address">Street Address</label>
+                <input type="text" name="street-address-line2" id="street-add2">
+                <label for="street-address-line2">Street Address Line 2 </label>
+                <input type="text" name="City" id="city">
+                <label for="City"> City </label>
+                <input type="text" name="state" id="state">
+                <label for="state"> State/Province </label>
+                <input type="text" name="code-z" id="code-z">
+                <label for="code-z"> Postal/Zip Code </label>
+            </div>
+            <div class="form-field">
+                <h5>Phone Number </h5>
+                <input type="text" name="phone-number" id="phone-number" placeholder="(000) 000-0000">
+            </div>
             <div class="form-field">
                 <label for="Email">Email:</label>
-                <input type="text" name="email" id="email" autocomplete="off" placeholder="Enter your email">
+                <input type="text" name="email" id="email" placeholder="Enter your email">
                 <small></small>
             </div>
-        <hr>
-        <div class="form-field">
+            <hr>
+            <div class="form-field">
                 <h5>How did you hear about us?</h5>
-                <select id="List" >
+                <select id="List">
                         <option value="" id="selected">Please Select</option>
                     <option value="1">None</option>
                     <option value="2">Newspaper</option>
@@ -54,30 +54,54 @@
                     <option value="4">Magazine</option>
                     <option value="5">Others</option>
                 </select>
-        </div>
-        <div class="form-field">
-                            <h5>Feedback about us:</h5>
-                         <textarea rows="10" cols="70" name="feedback"></textarea>
+            </div>
+            <div class="form-field">
+                <h5>Feedback about us:</h5>
+                <textarea rows="10" cols="70" name="feedback"></textarea>
 
-        </div>
-        <div class="form-field">
-                                        <h5>Suggestions if any for further improvement:</h5>
-                                        <textarea rows="10" cols="70" name="imrpove"></textarea>
+            </div>
+            <div class="form-field">
+                <h5>Suggestions if any for further improvement:</h5>
+                <textarea rows="10" cols="70" name="imrpove"></textarea>
 
-        </div>
-        <div class="form-field">
-        <h5>Will you be Willing to recommend us?</h5>
-            <input type="checkbox" id="yes" name="yes" value="yes">
-            <label for="yes"> Yes</label><br>
-            <input type="checkbox" id="maybe" name="maybe" value="maybe">
-            <label for="vehicle3"> maybe</label> <br>
-            <input type="checkbox" id="no" name="no" value="no">
-            <label for="no"> No</label><br><br>
-        </div>
-        <div class="form-field">
-            <h5>Please give reference of any two people whom you feel:</h5>
-        </div>
-        <hr>
+            </div>
+            <div class="form-field">
+                <h5>Will you be Willing to recommend us?</h5>
+                <input type="checkbox" id="yes" name="yes" value="yes">
+                <label for="yes"> Yes</label><br>
+                <input type="checkbox" id="maybe" name="maybe" value="maybe">
+                <label for="vehicle3"> maybe</label> <br>
+                <input type="checkbox" id="no" name="no" value="no">
+                <label for="no"> No</label><br><br>
+            </div>
+            <div class="form-field">
+                <h5>Please give reference of any two people whom you feel:</h5>
+                <table class="table">
+                    <tbody>
+                        <tr class="heders-table">
+                            <td class="hidden">&nbsp;</td>
+                            <td>Full name</td>
+                            <td>Address</td>
+                            <td>Contact Number</td>
+                        </tr>
+                        <tr>
+                            <td class="one-table">1</td>
+                            <td><input name="name-table" type="text" id="tableinput" /></td>
+                            <td><input name="address-table" type="text" id="tableinput" /></td>
+                            <td><input type="text" name="contact-table" id="tableinput"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="one-table">2</td>
+                            <td><input name="name-table" type="text" id="tableinput" /></td>
+                            <td><input name="address-table" type="text" id="tableinput" /></td>
+                            <td><input type="text" name="contact-table" id="tableinput"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <hr>
             <div class="form-field">
                 <input type="submit" value="submit" class="btn">
             </div>

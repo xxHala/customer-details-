@@ -1,107 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
 :root {
-  --main-text: rgb(44, 51, 69);
-  --secondary-text: rgb(87, 100, 126);
-  --dark-red: rgb(242, 58, 60);
-  --light-red: rgb(255, 237, 237);
-  --dark-blue: rgb(46, 105, 255);
-  --light-blue: rgb(241, 245, 255);
-  --table-color: rgb(195, 202, 216);
-  --green-color: rgb(24, 189, 91);
+    --main-text: rgb(44, 51, 69);
+    --secondary-text: rgb(87, 100, 126);
+    --dark-red: rgb(242, 58, 60);
+    --light-red: rgb(255, 237, 237);
+    --dark-blue: rgb(46, 105, 255);
+    --light-blue: rgb(241, 245, 255);
+    --table-color: rgb(195, 202, 216);
+    --green-color: rgb(24, 189, 91);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 17px;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .container {
-  background-color: #fff;
-  padding: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 700px;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 700px;
 }
 
 .form {
-  padding: 10px 30px;
+    padding: 10px 30px;
 }
 
 .form h1 {
-  /* margin:15px 20px; */
-  font-size: 24px;
-  text-align: left;
-  font-family: "Inter", sans-serif;
-  color: var(--main-text);
-  padding-top: 25px;
-  padding-bottom: 45px;
+    /* margin:15px 20px; */
+    font-size: 24px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text);
+    padding-top: 25px;
+    padding-bottom: 45px;
 }
 
-h1 {
-}
+h1 {}
 
 .form-field {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .form-field label {
-  font-family: "Inter", sans-serif;
-  color: #777;
-  margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    color: #777;
+    margin-bottom: 5px;
 }
+
 .form-field h5 {
-  font-size: 14px;
-  text-align: left;
-  font-family: "Inter", sans-serif;
-  color: var(--main-text);
-  margin-bottom: 16px;
-  margin-top: 16px;
+    font-size: 14px;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text);
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
+
 select#List {
-  /* font-weight: bold; */
-  color: var(--secondary-text);
-  border-radius: 5px;
-  outline: none;
-  border: solid 1px #c1c1c1;
-  background: #fffdfd;
-  display: inline-block;
-  padding: 8px 6px;
-  display: block;
-  font-family: "Inter", sans-serif;
-  width: 280px;
-  font-size: 16px;
+    /* font-weight: bold; */
+    color: var(--secondary-text);
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px #c1c1c1;
+    background: #fffdfd;
+    display: inline-block;
+    padding: 8px 6px;
+    display: block;
+    font-family: "Inter", sans-serif;
+    width: 280px;
+    font-size: 16px;
 }
+
 .form-field input {
-  border: solid 2px #f0f0f0;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  display: block;
-  width: 100%;
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
 }
 
 .form-field .btn {
-  width: 194px;
-  padding: 15px;
-  margin-top: 34px;
-  border-radius: 3px;
-  background: var(--green-color);
-  border-top-style: none;
-  border-right-style: none;
-  border-left-style: none;
-  color: #fff;
-  text-transform: uppercase;
+    width: 194px;
+    padding: 15px;
+    margin-top: 34px;
+    border-radius: 3px;
+    background: var(--green-color);
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.form-field .hider-table {
+    background-color: var(--table-color);
+    color: var(--main-text);
+    padding: 16px;
+    font-size: 15px;
+}
+
+.form-field .contact-hid {
+    width: 260px;
+}
+
+.heders-table {
+    border: 15px solid rgb(0 0 0);
+    padding: 53px 50px;
+    /* width: 27px; */
+    height: 35px;
+    /* size: 68px; */
+    font-size: 16px;
+    text-align: center;
+    background: var(--table-color);
+}
+
+.table .one-table {
+    text-align: left;
+    padding: 12px;
+    width: 69px;
+    background: var(--table-color);
+}
+
+.table .hidden {
+    visibility: hidden;
 }
