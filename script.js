@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       event.preventDefault();
     }
   }
+  
   function changeStyle(event) {
     this.style.backgroundColor = '#F1F5FF';
   }
