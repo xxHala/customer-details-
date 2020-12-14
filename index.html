@@ -5,107 +5,136 @@
     <title>Custmomer Details</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
-
 </head>
 
 <body>
     <div class="container">
-        <form id="Customer-det" class="form">
-            <h1>Customer Details: </h1>
-            <hr>
-            <div class="form-field">
-                <h5>Full Name</h5>
-                <input type="text" name="Fname" id="name">
+        <h1>Customer Details: </h1>
+        <form id="Customer-det" action="./" class="form" ">
+            <div class=" form-field ">
+                <h5 class=" required">Full Name</h5>
+            <div class="form-inline-in">
+                <input type="text" name="Fname" class="form-inline person-name" id='fname'>
                 <label for="Fname">First Name</label>
-                <input type="text" name="Lname" id="name">
+            </div>
+            <div class="form-inline-in">
+                <input type="text" name="Lname" class="form-inline person-name" id='Lname'>
                 <label for="Lname">Last Name</label>
             </div>
-            <div class="form-field">
-                <h5>Address</h5>
-                <input type="text" name="street-address" id="street-add">
-                <label for="street-address">Street Address</label>
-                <input type="text" name="street-address-line2" id="street-add2">
-                <label for="street-address-line2">Street Address Line 2 </label>
-                <input type="text" name="City" id="city">
-                <label for="City"> City </label>
-                <input type="text" name="state" id="state">
-                <label for="state"> State/Province </label>
-                <input type="text" name="code-z" id="code-z">
-                <label for="code-z"> Postal/Zip Code </label>
-            </div>
-            <div class="form-field">
-                <h5>Phone Number </h5>
-                <input type="text" name="phone-number" id="phone-number" placeholder="(000) 000-0000">
-            </div>
-            <div class="form-field">
-                <label for="Email">Email:</label>
-                <input type="text" name="email" id="email" placeholder="Enter your email">
-                <small></small>
-            </div>
-            <hr>
-            <div class="form-field">
-                <h5>How did you hear about us?</h5>
-                <select id="List">
-                        <option value="" id="selected">Please Select</option>
-                    <option value="1">None</option>
-                    <option value="2">Newspaper</option>
-                    <option value="3">Internet</option>
-                    <option value="4">Magazine</option>
-                    <option value="5">Others</option>
-                </select>
-            </div>
-            <div class="form-field">
-                <h5>Feedback about us:</h5>
-                <textarea rows="10" cols="70" name="feedback"></textarea>
+            <div class="error hidden"> This felid is required </div>
+    </div>
 
-            </div>
-            <div class="form-field">
-                <h5>Suggestions if any for further improvement:</h5>
-                <textarea rows="10" cols="70" name="imrpove"></textarea>
+    <div class="form-field">
+        <h5 class="required">Address</h5>
+        <div class="form-field f2">
 
-            </div>
-            <div class="form-field">
-                <h5>Will you be Willing to recommend us?</h5>
-                <input type="checkbox" id="yes" name="yes" value="yes">
-                <label for="yes"> Yes</label><br>
-                <input type="checkbox" id="maybe" name="maybe" value="maybe">
-                <label for="vehicle3"> maybe</label> <br>
-                <input type="checkbox" id="no" name="no" value="no">
-                <label for="no"> No</label><br><br>
-            </div>
-            <div class="form-field">
-                <h5>Please give reference of any two people whom you feel:</h5>
-                <table class="table">
-                    <tbody>
-                        <tr class="heders-table">
-                            <td class="hidden">&nbsp;</td>
-                            <td>Full name</td>
-                            <td>Address</td>
-                            <td>Contact Number</td>
-                        </tr>
-                        <tr>
-                            <td class="one-table">1</td>
-                            <td><input name="name-table" type="text" id="tableinput" /></td>
-                            <td><input name="address-table" type="text" id="tableinput" /></td>
-                            <td><input type="text" name="contact-table" id="tableinput"></td>
+            <input type="text" name="street-address" class="street-add">
+            <label for="street-address">Street Address</label>
+            <input type="text" name="street-address-line2" class="street-add">
+            <label for="street-address-line2">Street Address Line 2 </label>
+        </div>
+        <div class="orm-inline-in">
+            <input type="text" name="city" class="form-inline" class="street-add">
+            <label for="Fname">City</label>
+        </div>
+        <div class="form-inline-in">
+            <input type="text" name="stte" class="form-inline" class="street-add">
+            <label for="Lname">State/Province</label>
+        </div>
 
-                        </tr>
-                        <tr>
-                            <td class="one-table">2</td>
-                            <td><input name="name-table" type="text" id="tableinput" /></td>
-                            <td><input name="address-table" type="text" id="tableinput" /></td>
-                            <td><input type="text" name="contact-table" id="tableinput"></td>
-                        </tr>
-                    </tbody>
+        <input type="text" name="code-z" id="code-z" class="street-add">
+        <label for="code-z"> Postal/Zip Code </label>
+        <div class="error hidden"> This felid is required </div>
 
-                </table>
-            </div>
-            <hr>
-            <div class="form-field">
-                <input type="submit" value="submit" class="btn">
-            </div>
-        </form>
+    </div>
+
+
+    <div class="form-field">
+        <h5 class="required">Phone Number </h5>
+        <input type="number" name="phone-number" class="phone-number" placeholder="(000) 000-0000">
+        <div class="error hidden"> This felid is required </div>
+
+    </div>
+
+    <div class="form-field">
+        <h5>E-mail</h5>
+        <input type="text" name="email" id="email" class='email' placeholder="Enter your email">
+    </div>
+    <hr>
+    <div class="form-field ">
+        <h5 class="required">How did you hear about us?</h5>
+        <select id="List" onchange='Checkoption(this.value);'>
+            <option value="" id="selected">Please Select</option>
+            <option value="1">None</option>
+            <option value="2">Newspaper</option>
+            <option value="3">Internet</option>
+            <option value="4">Magazine</option>
+            <option value="5">other (Please specify..) </option>
+        </select>
+        <div id="other">
+            <h5 class="required" id="other"> Others</h5>
+            <input type="text" name="other" id="other" />
+        </div>
+        <div class="error hidden"> This felid is required </div>
+
+    </div>
+    <div class="form-field">
+        <h5>Feedback about us:</h5>
+        <textarea rows="10" cols="74" name="feedback"></textarea>
+
+    </div>
+    <div class="form-field">
+        <h5>Suggestions if any for further improvement:</h5>
+        <textarea rows="10" cols="74" name="imrpove"></textarea>
+
+    </div>
+    <div class="form-field checklist">
+        <h5>Will you be Willing to recommend us?</h5>
+        <label class="container2">Yes
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container2">Maybe
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container2">No
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="form-field">
+        <h5>Please give reference of any two people whom you feel:</h5>
+        <table class="table">
+            <tbody>
+                <tr class="heders-table">
+                    <td class="hidde">&nbsp;</td>
+                    <td>Full name</td>
+                    <td>Address</td>
+                    <td class="contact-table">Contact Number</td>
+                </tr>
+                <tr>
+                    <td class="one-table">1</td>
+                    <td><input name="name-table" type="text" id="tableinput" /></td>
+                    <td><input name="address-table" type="text" id="tableinput" /></td>
+                    <td><input type="text" name="contact-table" id="tableinput"></td>
+
+                </tr>
+                <tr>
+                    <td class="one-table">2</td>
+                    <td><input name="name-table" type="text" id="tableinput" /></td>
+                    <td><input name="address-table" type="text" id="tableinput" /></td>
+                    <td><input type="text" name="contact-table" id="tableinput"></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="form-field">
+        <input type="submit" value="Submit" class="btn">
+    </div>
+    </form>
+
     </div>
 
 </body>
