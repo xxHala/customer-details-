@@ -103,8 +103,29 @@ html {
 .hidde {
     display: none;
 }
+.form-field i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
 
+.form-field.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
 
+.form-field small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-field.error small {
+	visibility: visible;
+}
 /**/
 
 .containerL {
@@ -278,7 +299,7 @@ border-collapse: collapse;
 
 }
 
-.form-field .btn {
+.form button {
     width: 194px;
     padding: 15px;
     margin-top: 34px;

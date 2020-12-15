@@ -1,29 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
-    /**
-     * Ignore spaces for target input
-     * @param {*} event keydown event
-     */
-    function preventSpaces(event) {
-        if (event.code === 'Space') {
-            event.preventDefault();
-        }
-    }
-
-
-    /**
-     * Checkoption , check for the list if the selected value is 'other' then display
-     * the input box to the user
-     * @param {string} val -selected option from the list
-     * @return {void}
-     */
-    function Checkoption(val) {
-       
-        const element =  document.getElementById("other")
-       if( this.options[this.selectedIndex].value == 'WHATEVER VALUE'  )  
-    }
-
-
     let personData = {};
     const mainForm = document.getElementsByClassName('form')[0];
     const personNameInputs = document.getElementsByClassName('person-name');
@@ -33,29 +9,56 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const personChoise = document.getElementsByClassName('Choise');
     const formFiled = document.getElementsByClassName('form-field');
 
-
-    function validateNum(event) {
-        if (personPhone === '') {
-            document.getElementsByClassName('error')[2].classList.add('hidden');
-        } else {
-            document.getElementsByClassName('error')[2].classList.remove('hidden');
+    /**
+     * Ignore spaces for target input
+     * @param {*} event keydown event
+     */
+    function preventSpaces(event) {
+        if (event.code === 'Space') {
+            event.preventDefault();
         }
     }
+/**
+ *  check for email
+ * @param {email} user input
+ * @return {boolean}
+ */
 
+    function ValidateEmail(mail) 
+    {        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+console.log(mail);
+}
+    
+   
+    
+    /**
+     * Checkoption , check for the list if the selected value is 'other' then display
+     * the input box to the user
+     * @param {*}  -selected option from the list
+     * @return {void}
+     */
+    function Checkoption() {
+            const other = document.querySelector('.other');
+            const option = document.querySelector('.Choise');
+            let value = option.value;
+            if (value == '4') {
+                option[5].text = "other (Please specify..) "
+                other.style.display = 'inline-block';
+            }
+            else {
+                option[5].text = "other"
+                other.style.display = 'none';
+            }
+        
+        }
+
+
+        for (let i = 0; i < personEmail.length; i++) {
+    personEmail[i].addEventListener('keydown',ValidateEmail);
+        }
     // adding color on focusing
     for (let i = 0; i < formFiled.length; i++) {
         formFiled[i].addEventListener('mousedown', changeStyle);
-    }
-    for (let i = 0; i < personChoise.length; i++) {
-        function show(obj) {
-            no = obj.options[obj.selectedIndex].value;
-            count = obj.options.length;
-            for(i=1;i<count;i++)
-              document.getElementById('myDiv'+i).style.display = 'none';
-            if(no>0)
-              document.getElementById('myDiv'+no).style.display = 'block';
-          }
-        personChoise[i].addEventListener('click', Checkoption(personChoise[i]));
     }
 
     // prevent spaces for first name and last name
@@ -63,41 +66,33 @@ window.addEventListener('DOMContentLoaded', (event) => {
         personNameInputs[i].addEventListener('keydown', preventSpaces);
     }
 
-    function isEmail(emailValue) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    }
-
+  
     function checkInputs() {
+    
         // trim to remove the whitespaces
-        const nameValue = personNameInputs[0].value.trim();
-        const lastnameValue = personNameInputs[1].value.trim();
-        const emailValue = personEmail.value.trim();
-        const phone = personPhone.value.trim();
-
-        if (nameValue === '' && lastnameValue === '') {
-            document.getElementsByClassName('error')[2].classList.add('hidden');
+        let usernameValue = personNameInputs[0].value;
+        let userlastnameValue=personNameInputs[1].value;
+        if(usernameValue === ''&& userlastnameValue==='') {
+            setErrorFor(username, 'This felid is required');
         } else {
-            document.getElementsByClassName('error')[2].classList.remove('hidden');
-        }
-
-        if (emailValue === '') {
-            document.getElementsByClassName('error')[2].classList.add('hidden');
-        } else if (!isEmail(emailValue)) {
-
-        } else {
-            document.getElementsByClassName('error')[2].classList.remove('hidden');
-        }
-
-        if (phone === '') {
-            document.getElementsByClassName('error')[2].classList.add('hidden');
-        } else {
-            document.getElementsByClassName('error')[2].classList.remove('hidden');
-        }
-
-
+console.log("notempty")        }
     }
-
-    mainForm.addEventListener('submit', (e) => {
+    
+    function setErrorFor(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-field error';
+        small.innerText = message;
+    }
+   
+        
+    mainForm.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        checkInputs();
+    });
+    /*
+        mainForm.addEventListener('submit', (e) => {
         e.preventDefault();
         // if (hasErrors()) {
         //   return
@@ -113,5 +108,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         console.log('personData', personData);
         // code here
-    });
+    });*/
 });
