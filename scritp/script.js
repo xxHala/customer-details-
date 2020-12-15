@@ -1,18 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
     /**
-     * Checkoption , check for the list if the selected value is 'other' then display
-     * the input box to the user
-     * @param {string} val -selected option from the list
-     * @return {void}
-     */
-    function Checkoption(val) {
-        const element = document.getElementById('other');
-        if (val === '1' || val === '5') element.style.display = 'block';
-        else element.style.display = 'none';
-    }
-
-    /**
      * Ignore spaces for target input
      * @param {*} event keydown event
      */
@@ -22,6 +10,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+
+    /**
+     * Checkoption , check for the list if the selected value is 'other' then display
+     * the input box to the user
+     * @param {string} val -selected option from the list
+     * @return {void}
+     */
+    function Checkoption(val) {
+       
+        const element =  document.getElementById("other")
+       if( this.options[this.selectedIndex].value == 'WHATEVER VALUE'  )  
+    }
 
 
     let personData = {};
@@ -45,6 +45,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // adding color on focusing
     for (let i = 0; i < formFiled.length; i++) {
         formFiled[i].addEventListener('mousedown', changeStyle);
+    }
+    for (let i = 0; i < personChoise.length; i++) {
+        function show(obj) {
+            no = obj.options[obj.selectedIndex].value;
+            count = obj.options.length;
+            for(i=1;i<count;i++)
+              document.getElementById('myDiv'+i).style.display = 'none';
+            if(no>0)
+              document.getElementById('myDiv'+no).style.display = 'block';
+          }
+        personChoise[i].addEventListener('click', Checkoption(personChoise[i]));
     }
 
     // prevent spaces for first name and last name

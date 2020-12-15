@@ -4,7 +4,7 @@
 <head>
     <title>Custmomer Details</title>
     <link rel="stylesheet" href="style/style.css">
-    <!--<script src="scritp/script.js"></script>-->
+    <script src="scritp/script.js"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
                     <input type="text " class="inbutclass street-add "/>
                     <span class="label ">Postal/Zipcode</span>
                 </div>
-                <div class=" hidden "> This felid is required </div>
+                <div class="  error hidden "> This felid is required </div>
                 </div>       
 
 
@@ -77,19 +77,20 @@
         <div class="form-field ">
             <span class="form-hed required ">How did you hear about us?</span>
             <div class="form-inline-in ">
-                <select class="customclass "  onchange='Checkoption(this.value);'>
+                <select class="customclass Choise" ">
             <option value=" " id="selected ">Please Select</option>
             <option value="1 ">None</option>
             <option value="2 ">Newspaper</option>
             <option value="3 ">Internet</option>
             <option value="4 ">Magazine</option>
-            <option value="5 ">other (Please specify..) </option>
+            <option value="5 " >other (Please specify..) </option>
     </div>
-    <div class="form-field ">
-        <span class="form-hed required ">Others</span>
+    <div class="form-field " id="other">
+        <span class="form-hed required  ">Others</span>
         <div class="form-inline-in ">
-            <input type="text " class="hidde customclass " />
+            <input type="text " class="hidde customclass other" />
         </div>
+
         <div class="error hidden "> This felid is required </div>
     </div>
     <div class="form-field ">
