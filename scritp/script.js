@@ -9,8 +9,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const personChoise = document.getElementsByClassName('Choise');
   const formHeder = document.getElementsByClassName('form-hed');
   const formFiled = document.getElementsByClassName('form-field');
-  const er = document.getElementsByClassName('error-name');
-
   /**
      * Ignore spaces for target input
      * @param {*} event keydown event
@@ -52,6 +50,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
        */
 
   function showError(input, messge) {
+    const er = document.getElementsByClassName('error-name');
     for (let i = 0; i < er.length; i++) {
       er[i].textContent = messge;
       er[i].style.cssText = 'visibility: visible';
@@ -71,7 +70,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const lName = personNameInputs[1].value.trim();
     if (!fName && !lName) {
       showError(fName, 'This felid is required.');
-      showError(lName, 'This felid is required.');
     } else {
       personData = {
         ...personData,
@@ -97,7 +95,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const postalcode = personAddress[4].value;
     if (!streetaddress || !cityaddress
           || !state || !postalcode) {
-      showError(streetaddress, 'This felid is required.');
+      showError(streetaddress, 'This felid is required');
     }
   }
 
@@ -113,7 +111,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (prent.className.includes('fieldRequired')) {
           prent.classList.remove('fieldRequired');
         }
-        er[i].style.cssText = 'visibility: hidden';
       });
     }
   }
