@@ -21,37 +21,36 @@
                     <span class=" form-hed required ">Full Name</span>
                     <div class=" inbut-form ">
                         <div class=" form-inline-in ">
-                            <input type=" text " class=" inbutclass person-name form-input">
+                            <input type=" text " name='FirstName' class=" inbutclass person-name form-input">
                             <span class=" label ">First Name</span>
                         </div>
                         <div class=" form-inline-in ">
-                            <input type=" text " class=" inbutclass person-name form-input">
+                            <input type=" text " name='LastName' class=" inbutclass person-lname form-input">
                             <span class=" label ">Last Name</span>
                         </div>
 
                     </div>
-                    <p class="error-name"></p>
 
                 </div>
 
                 <div class="form-field">
                     <span class="form-hed required  ">Address</span>
                     <div class="form-inline-in ">
-                        <input type="text " class="inbutclass street-add  form-input" />
+                        <input type="text "  name ="street Address" class="inbutclass street-add form-input" />
                         <span class="label ">Street Address</span>
                     </div>
                     <div class="form-inline-in ">
-                        <input type="text " class="inbutclass street-add  " />
+                        <input type="text "  class="inbutclass street-add  " />
                         <span class="label ">Street Address Line2</span>
                     </div>
 
                     <div class="inbut-form ">
                         <div class="form-inline-in ">
-                            <input type="text " class="inbutclass street-add form-input">
+                            <input type="text " name="City" class="inbutclass street-add form-input">
                             <span class="label ">City</span>
                         </div>
                         <div class="form-inline-in ">
-                            <input type="text " class="inbutclass street-add form-input">
+                            <input type="text "  name ="State/Provice"class="inbutclass street-add form-input">
                             <span class="label ">State/provicne</span>
                         </div>
                     </div>
@@ -60,7 +59,6 @@
                         <span class="label ">Postal/Zipcode</span>
 
                     </div>
-                    <p class="error-name"></p>
 
                 </div>
 
@@ -68,16 +66,20 @@
                 <div class="form-field">
                     <span class="form-hed required ">Phone Number</span>
                     <div class="form-inline-in ">
-                        <input type="number" class="phone-number customclass form-input"
-                            placeholder="(000) 000-0000 " />
+                        <div class=" inbut-form ">
+
+                        <input type="text" class="phone-number customclass form-input"
+                            placeholder="(000) 000-0000 " /> </div>
                     </div>
-                    <p class="error-name"><img src="mark.png"></p>
 
                 </div>
                 <div class="form-field">
                     <span class="form-hed ">E-mail</span>
                     <div class="form-inline-in ">
+                                            <div class=" inbut-form ">
+
                         <input type="text " class="email customclass " placeholder="Enter your email " />
+                                            </div>
                         <span class="lblError"></span>
 
                     </div>
@@ -88,6 +90,7 @@
                 <div class="form-field">
                     <span class="form-hed required ">How did you hear about us?</span>
                     <div class="form-inline-in ">
+                        <div class=" inbut-form ">
                         <select class="customclass Choise form-input" id="choise-op">
                             <option value=" " id=" selected ">Please Select</option>
                             <option value=" 1 ">None</option>
@@ -96,16 +99,18 @@
                             <option value=" 4 ">Magazine</option>
                             <option value=" 5 ">other (Please specify..) </option>
                         </select>
+                        </div>
+                    </div>
+                </div>
+
                         <div class=" form-field other " id="other">
                             <span class="form-hed  required ">Others</span>
                             <div class="form-inline-in ">
                                 <input type="text " class=" customclass form-input" />
                             </div>
                         </div>
-                        <p class="error-name"></p>
 
-                    </div>
-                </div>
+                
                 <div class="form-field">
                     <span class="form-hed ">Feedback about us:</span>
                     <div class="form-inline-in ">
@@ -136,43 +141,36 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-
+                </div>
                     <div class="form-field">
                         <span class="form-hed ">Please give reference of any two people whom you feel: </span>
-                        <table class="Table">
-                            <tbody>
-                                <tr class="heders-table">
-                                    <td class="hidd">&nbsp;</td>
-                                    <td>Full Name</td>
-                                    <td>Address</td>
-                                    <td>
-                                        Contact Number
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="one-table">1</td>
-                                    <td><input name="name-table " type="text " class="tableinput " /></td>
-                                    <td><input name="address-table " type="text " class="tableinput " /></td>
-                                    <td><input type="text " name="contact-table " class="tableinput "></td>
-                                </tr>
-                                <tr>
-                                    <td class="one-table">2</td>
-                                    <td><input name="name-table " type="text " class="tableinput " /></td>
-                                    <td><input name="address-table " type="text " class="tableinput " /></td>
-                                    <td><input type="text " name="contact-table " class="tableinput "></td>
-
-                                </tr>
-                            </tbody>
-                        </table>
-
+                        <table>
+                            <tbody><tr>
+                                <th class="hide-td"></th>
+                                <th>Full name</th>
+                                <th>Address</th>
+                                <th>Contact number</th>
+                            </tr>
+                            <tr>
+                                <th class="left-table">1</th>
+                                <td class="table-d "><input type="text"></td>
+                                <td class="table-d "><input type="text"></td>
+                                <td class="table-d "><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th class="left-table">2</th>
+                                <td class="table-d "><input type="text"></td>
+                                <td class="table-d "><input type="text"></td>
+                                <td class="table-d "><input  type="text"></td>
+                            </tr>
+                        </tbody></table>
                     </div>
-                </div>
                 <div class="FormSub">
                     <button type="submit">Submit</button>
                 </div>
-
             </div>
-        </form>
+        </for>
+    </di>
 
 </body>
 
