@@ -35,19 +35,37 @@ personPhone.forEach(item => {
  * show other if selected other from menu
  *
  */
+personChoise.forEach(e => {
+  e.addEventListener('change',event=>{
+    const otherDiv = document.querySelector('.hideDiv');
+    const option = document.getElementById('choise-op');
+    let value = option.value;
+    if (value == '4') {
+        option[5].text = "Other (Please specify...)"
+        otherDiv.style.display = 'block';
+    } else {
+        option[5].text = "Other"
+        otherDiv.style.display = 'none';
+    }
+
+  }
+  
+  )
+});
+/*
 function checkOther() {
-  const other = document.querySelector('.hidden');
-  const option = document.getElementById('select1');
+  const otherDiv = document.querySelector('.hideDiv');
+  const option = document.getElementById('choise-op');
   let value = option.value;
   if (value == '4') {
       option[5].text = "Other (Please specify...)"
-      other.style.display = 'block';
+      otherDiv.style.display = 'block';
   } else {
       option[5].text = "Other"
-      other.style.display = 'none';
+      otherDiv.style.display = 'none';
   }
 
-}
+}*/
   /**
    * check for email validation 
    * @param {*} void

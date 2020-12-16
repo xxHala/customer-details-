@@ -38,10 +38,6 @@ html {
  padding: 20px 30px 0px 28px;
  }
 
-.inbut-form {
-    /* padding: 10px; */
-    /* margin: 12px -7px; */
-}
 
 .form-inline-in {
     display: flex;
@@ -273,8 +269,8 @@ td {
 }
 
 .form-field {
-    padding: 4px;
-    margin: 20px 20px -11px 0px;
+    padding: 6px;
+    margin: 20px 0px 0px 0px;
 }
 
 input.inbutclass.person-name.form-input {
@@ -319,6 +315,9 @@ border-collapse: collapse;
     cursor: pointer;
     font-size: 18px;
     transition: all 0.5s;
+}
+.hideDiv{
+    display: none;
 }
 .fieldRequired::after {
     content: "This field is requierd.";
