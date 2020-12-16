@@ -44,7 +44,13 @@ html {
     /* margin-top: 4px; */
     flex-direction: column;
 }
+.fieldRequired input.inbutclass.person-name.form-input {
+border: 1px solid red;
+}
+.fieldRequired .form-inline-in input, select, textarea{
+    border: 1px solid red;
 
+}
 .form-hed {
     margin: 5px 0;
     font-weight: 600;
