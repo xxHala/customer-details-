@@ -3,8 +3,13 @@
 
 <head>
     <title>Custmomer Details</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <script src="scritp/script.js"></script>
 </head>
@@ -25,7 +30,7 @@
                             <span class=" label ">First Name</span>
                         </div>
                         <div class=" form-inline-in ">
-                            <input type=" text " name='LastName' class=" inbutclass person-lname form-input">
+                            <input type=" text " name='LastName' class=" inbutclass person-name form-input">
                             <span class=" label ">Last Name</span>
                         </div>
 
@@ -36,11 +41,11 @@
                 <div class="form-field">
                     <span class="form-hed required  ">Address</span>
                     <div class="form-inline-in ">
-                        <input type="text "  name ="street Address" class="inbutclass street-add form-input" />
+                        <input type="text " name="street Address" class="inbutclass street-add form-input" />
                         <span class="label ">Street Address</span>
                     </div>
                     <div class="form-inline-in ">
-                        <input type="text "  class="inbutclass street-add  " />
+                        <input type="text " class="inbutclass street-add  " />
                         <span class="label ">Street Address Line2</span>
                     </div>
 
@@ -50,7 +55,7 @@
                             <span class="label ">City</span>
                         </div>
                         <div class="form-inline-in ">
-                            <input type="text "  name ="State/Provice"class="inbutclass street-add form-input">
+                            <input type="text " name="State/Provice" class="inbutclass street-add form-input">
                             <span class="label ">State/provicne</span>
                         </div>
                     </div>
@@ -68,18 +73,19 @@
                     <div class="form-inline-in ">
                         <div class=" inbut-form ">
 
-                        <input type="text" class="phone-number customclass form-input"
-                            placeholder="(000) 000-0000 " /> </div>
+                            <input type="text" class="phone-number customclass form-input"
+                                placeholder="(000) 000-0000 " />
+                        </div>
                     </div>
 
                 </div>
                 <div class="form-field">
                     <span class="form-hed ">E-mail</span>
                     <div class="form-inline-in ">
-                                            <div class=" inbut-form ">
+                        <div class=" inbut-form ">
 
-                        <input type="text " class="email customclass " placeholder="Enter your email " />
-                                            </div>
+                            <input type="text " class="email customclass " placeholder="Enter your email " />
+                        </div>
                         <span class="lblError"></span>
 
                     </div>
@@ -91,37 +97,39 @@
                     <span class="form-hed required ">How did you hear about us?</span>
                     <div class="form-inline-in ">
                         <div class=" inbut-form ">
-                        <select class="customclass Choise form-input" id="choise-op">
-                            <option value=" " id=" selected ">Please Select</option>
-                            <option value=" 1 ">None</option>
-                            <option value=" 2 ">Newspaper</option>
-                            <option value=" 3 ">Internet</option>
-                            <option value=" 4 ">Magazine</option>
-                            <option value=" 5 ">other (Please specify..) </option>
-                        </select>
+                            <select class="customclass Choise form-input" id="choise-op">
+                                <option value=" " id=" selected ">Please Select</option>
+                                <option value="1">None</option>
+                                <option value="2">Newspaper</option>
+                                <option value="3">Internet</option>
+                                <option value="4">Magazine</option>
+                                <option value="otherc">other (Please specify..) </option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
-                        <div class=" form-field hideDiv ">
-                            <span class="form-hed  required ">Others</span>
-                            <div class="form-inline-in ">
-                                <input type="text " class=" customclass form-input" />
-                            </div>
+                <div class=" form-field hideDiv form-input ">
+                    <span class="form-hed  required ">Others</span>
+                    <div class="form-inline-in ">
+                        <div class=" inbut-form ">
+                            <input type="text " class="form-input" />
                         </div>
+                    </div>
+                </div>
 
-                
+
                 <div class="form-field">
                     <span class="form-hed ">Feedback about us:</span>
                     <div class="form-inline-in ">
-                        <textarea rows="10 " cols="74 " name="feedback "></textarea>
+                        <textarea rows="10 " cols="74 " name="feedback" class="Feedback"></textarea>
                     </div>
                 </div>
 
                 <div class="form-field">
                     <span class="form-hed ">Suggestions if any for further improvement:</span>
                     <div class="form-inline-in ">
-                        <textarea rows="10 " cols="74 " name="imrpove "></textarea>
+                        <textarea rows="10 " cols="74 " name="imrpove" class="sugg"></textarea>
                     </div>
                 </div>
 
@@ -129,23 +137,24 @@
                     <span class="form-hed ">Will you be Willing to recommend us?</span>
                     <div class="form-inline-in ">
                         <label class="containerL">Yes
-                            <input type="checkbox" checked="checked">
+                            <input type="checkbox" value="Yes" checked="checked" class="messageCheckbox">
                             <span class="checkmark"></span>
                         </label>
                         <label class="containerL">Maybe
-                            <input type="checkbox">
+                            <input type="checkbox" class="messageCheckbox" value="Maybe">
                             <span class="checkmark"></span>
                         </label>
                         <label class="containerL">No
-                            <input type="checkbox">
+                            <input type="checkbox" class="messageCheckbox" value="No">
                             <span class="checkmark"></span>
                         </label>
                     </div>
                 </div>
-                    <div class="form-field">
-                        <span class="form-hed ">Please give reference of any two people whom you feel: </span>
-                        <table>
-                            <tbody><tr>
+                <div class="form-field">
+                    <span class="form-hed ">Please give reference of any two people whom you feel: </span>
+                    <table class="tableFooter">
+                        <tbody>
+                            <tr>
                                 <th class="hide-td"></th>
                                 <th>Full name</th>
                                 <th>Address</th>
@@ -161,16 +170,17 @@
                                 <th class="left-table">2</th>
                                 <td class="table-d "><input type="text"></td>
                                 <td class="table-d "><input type="text"></td>
-                                <td class="table-d "><input  type="text"></td>
+                                <td class="table-d "><input type="text"></td>
                             </tr>
-                        </tbody></table>
-                    </div>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="FormSub">
                     <button type="submit">Submit</button>
                 </div>
             </div>
-        </for>
-    </di>
+            </for>
+            </di>
 
 </body>
 
