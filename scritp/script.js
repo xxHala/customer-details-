@@ -55,7 +55,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
    * @param {*} void
    * @returns void
    */
-
   function validateEmail() {
     const email = document.querySelector('.email');
     const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=*?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -63,7 +62,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
       flag = true;
     }
   }
-
   /**
    * removing class on foucs for each felid
    * @param {*} event foucs
@@ -78,23 +76,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   }
-
   removeError();
   /**
  *  check for required fields update flag if true
  * @param {*} feild
  */
   function checkRequired(feild) {
+    let flagRequire = false;
     document.querySelectorAll(feild).forEach((e) => {
       if (e.value === '') {
         const parnt = e.closest('.form-field');
         parnt.classList.add('fieldRequired');
-        flag = false;
-      }
-      flag = true;
+        flagRequire = false;
+      } else flagRequire = true;
     });
-    return flag;
+    return flagRequire;
   }
+  /**
+   * to retrive check-list value
+   * @param{*}
+   * @returns string CheckedValue
+   */
   function inputElementValue() {
     let checkedValue = '';
     for (let i = 0; inputElements[i]; ++i) {
@@ -105,27 +107,53 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     return checkedValue;
   }
+  /**
+   * to detrmine Selected Option
+   * @param{*} void
+   * @returns String Choise from dorpdownlist
+   */
   function GetSelectedText() {
     const result = personChoise.options[personChoise.selectedIndex].text;
     const finalChoise = result;
     return finalChoise;
   }
+  /**
+   * get table input values
+   * @param{*}
+   * @returns tableData
+   */
   function GetTableRow() {
-    const tbl = document.querySelector('.tableFooter');
-    const rCount = tbl.rows.length;
-    console.log(tbl.rows[rCount - 1].cells[2].value);
+    let firstReference = {};
+    let secoundReference = {};
+    const tableD = document.querySelectorAll('.table-d input');
+    firstReference = {
+      firstReferenceName: tableD[0].value || '',
+      firstReferenceAddress: tableD[1].value || ' ',
+      firstReferenceNumber: tableD[2].value || ' ',
+    };
+    secoundReference = {
+      secoundReferenceName: tableD[3].value || ' ',
+      secoundReferenceAddress: tableD[4].value || ' ',
+      secoundReferenceNumber: tableD[5].value || ' ',
+    };
+    const entries = Object.entries(firstReference);
+    const entreisSecound = Object.entries(secoundReference);
+    const tData = entries.concat(entreisSecound);
+
+    return tData;
   }
 
   mainForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const required = ['.person-name', '.street-add', '.phone-number'];
-    required.forEach((feild) => checkRequired(feild));
     validateEmail();
-    if (flag === true) {
+    const nameRequired = checkRequired('.person-name');
+    const streetAdressRequire = checkRequired('.street-add');
+    const phonerequire = checkRequired('.phone-number');
+    const choiseList = checkRequired('.Choise');
+    if (nameRequired === true && streetAdressRequire === true && phonerequire === true && choiseList === true) {
       const option = GetSelectedText();
       const Check = inputElementValue();
-      const TableData = GetTableRow();
-      console.log(TableData);
+      const tabelintres = { ...GetTableRow() };
       personData = {
         ...personData,
         firstName: personNameInputs[0].value,
@@ -140,6 +168,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         feedback: Feedback.value || ' ',
         Suggestions: suggest.value || ' ',
         WillingToRecommend: Check || ' ',
+        Reference: tabelintres,
       };
       swal({
         title: 'Thank You',
@@ -149,7 +178,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         type: 'success',
         showCancelButton: false,
         showConfirmButton: false,
-        width: '400px'
+        width: '400px',
 
       });
       console.log('personData', personData);

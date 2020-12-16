@@ -86,7 +86,7 @@ html {
 .bordercustom {
     display: block;
     border-bottom: 2px solid rgb(204, 193, 193);
-    height: 68px;
+    height: 50px;
 }
 .FormSub {
     padding: 13px;
@@ -269,7 +269,7 @@ td {
 }
 
 .form-field {
-    padding: 6px;
+    padding: 10px;
     margin: 20px 0px 0px 0px;
 }
 
@@ -299,8 +299,8 @@ border-collapse: collapse;
 }
 .form-field:focus-within {
     background-color: #f1f5ff;
-    padding: 10px;
-    margin: 10px 0 20px 0;
+    /* padding: 10px; */
+    /* margin: 10px 0 20px 0; */
     border-radius: 2px;
 }
 .form button {
