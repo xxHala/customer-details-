@@ -146,6 +146,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   mainForm.addEventListener('submit', (e) => {
     e.preventDefault();
     validateEmail();
+
     const nameRequired = checkRequired('.person-name');
     const streetAdressRequire = checkRequired('.street-add');
     const phonerequire = checkRequired('.phone-number');
